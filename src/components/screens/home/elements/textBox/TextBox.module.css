@@ -1,0 +1,19 @@
+.textBox {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: black;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
