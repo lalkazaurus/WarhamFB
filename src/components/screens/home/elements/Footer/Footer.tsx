@@ -1,6 +1,8 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
 import styles from './Footer.module.css'
 
-const Footer = () => {
+export default function Footer() {
 	return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
@@ -13,10 +15,9 @@ const Footer = () => {
         <div className={styles.footerSection}>
           <h2 className={styles.footerTitle}>Quick Links</h2>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="#">Races</a></li>
-            <li><a href="#">Games</a></li>
-            <li><a href="#">Interesting Walkthroughs</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/races">Races</Link></li>
+            <li><Link to="/games">Games</Link></li>
           </ul>
         </div>
         <div className={styles.footerSection}>
@@ -24,9 +25,9 @@ const Footer = () => {
           <p>Email: indiraptor63983@gmail.com</p>
           <p>Phone: +380 68 847 38 23</p>
           <div className={styles.footerSocials}>
-            <a href="#"><i className="fab fa-facebook"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
+            <a href="/"><i className="fab fa-facebook"></i></a>
+            <a href="/"><i className="fab fa-twitter"></i></a>
+            <a href="/"><i className="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
@@ -36,5 +37,3 @@ const Footer = () => {
     </footer>
   );
 }
-
-export default Footer;

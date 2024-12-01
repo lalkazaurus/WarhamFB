@@ -1,6 +1,8 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
 import styles from './Header.module.css'
 
-const Header = () => {
+export default function Header() {
   return (
 	<header className={styles.header}>
       <div className={styles.headerLogo}>
@@ -9,14 +11,11 @@ const Header = () => {
       </div>
       <div className={styles.headerNav}>
         <ul>
-          <li>Home Page</li>
-          <li>Races</li>
-          <li>Games</li>
-          <li>Interesting Walkthroughs</li>
+          <li><Link to="/">Home Page</Link></li>
+          <li><Link to="/races">Races</Link></li>
+          <li><Link to="/games">Games</Link></li>
         </ul>
       </div>
     </header>
   )
 }
-
-export default Header; 

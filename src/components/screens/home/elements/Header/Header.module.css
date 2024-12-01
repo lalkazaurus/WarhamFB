@@ -1,0 +1,85 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #000;
+  padding: 15px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  box-sizing: border-box; 
+  overflow: hidden;
+}
+
+.headerLogo {
+  display: flex;
+  align-items: center; 
+  height: 100%; 
+}
+
+.logoImage {
+  max-width: 100%;
+  height: auto;
+  width: 150px;
+}
+
+.headerTitle {
+  font-size: 26px;
+  font-weight: bold;
+  margin-left: 10px;
+  color: #ffd21c;
+  text-shadow: 2px 2px 4px rgba(252, 5, 5, 0.5);
+  transition: all 1s ease;
+  line-height: 1; 
+}
+
+.headerNav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  align-items: center; 
+}
+
+.headerNav ul li a {
+  margin-left: 20px;
+  font-family: Marker Felt, fantasy;
+  color: #ffd21c;
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap; 
+  transition: all 1s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.headerNav ul li a:hover {
+  cursor: pointer;
+  color: #ff8e1c;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 875px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .headerNav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .headerNav ul li {
+    margin: 5px 0;
+  }
+
+  .logoImage {
+    width: 100px;
+  }
+}

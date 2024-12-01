@@ -1,6 +1,7 @@
+import React from 'react'
 import styles from './TextBox.module.css'
 
-const TextBox = () => {
+export default function TextBox() {
 		return (
 			<div className={styles.textBox}>
 				<p>
@@ -9,5 +10,3 @@ const TextBox = () => {
 		</div>
 		)
 }
-
-export default TextBox;

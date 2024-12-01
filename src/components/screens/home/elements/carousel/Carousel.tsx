@@ -1,6 +1,7 @@
+import React from 'react'
 import styles from './Carousel.module.css'
 
-const Carousel = () => {
+export default function Carousel() {
 		return (
 			<div className={styles.carousel}>
 				<div className={styles.carouselItem}><img alt ='' src="https://spikeybits.com/wp-content/uploads/2017/02/com.totalwar.warhammer.share_.default.jpg"/></div>
@@ -9,5 +10,3 @@ const Carousel = () => {
 			</div>
 		)
 }
-
-export default Carousel;
