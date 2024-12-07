@@ -3,6 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Router from './components/ui/Router/Router.tsx'
 import "./index.css"
+import "./output.css"
 
 const queryClient = new QueryClient();
 
