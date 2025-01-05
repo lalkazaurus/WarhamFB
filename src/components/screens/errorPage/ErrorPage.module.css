@@ -1,37 +1,41 @@
-.errorBlock {
+.container {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	width: calc(100% - 2px);
 	justify-content: center;
-	height: 87vh;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	font-family: "Rubik Vinyl", serif;
 	background-color: black;
+	border: 1px solid #ffd21c;
+}
+
+.title {
 	color: #ffd21c;
-	padding: 20px;
-	box-shadow: inset 0 0 15px  #ffd21c; 
+  font-weight: 700;
+  font-style: normal;
+	font-size: 120px;
 }
 
-
-.errorBlock h1 {
-	font-size: 3rem;
-	margin-bottom: 10px;
-}
-
-.errorBlock p {
-	font-size: 1.2rem;
-	margin-bottom: 20px;
-}
-
-.errorBlock a {
-	font-size: 1rem;
+.container > h2, p, a {
 	color: #ffd21c;
 	text-decoration: none;
-	border: 1px solid #ffd21c;
-	padding: 10px 20px;
-	border-radius: 5px;
-	transition: background-color 0.3s, color 0.3s;
 }
 
-.errorBlock a:hover {
-	background-color: #ffd21c;
-	color: black;
+.container > h2 {
+	font-size: 36px;
+}
+
+.container > p {
+	font-size: 24px;
+}
+
+.container > a {
+	transition: 0.5s all ease;
+	font-size: 30px;
+}
+
+.container > a:hover {
+	color: #ff8e1c;
+	transform: translate(0px, -2px);
 }

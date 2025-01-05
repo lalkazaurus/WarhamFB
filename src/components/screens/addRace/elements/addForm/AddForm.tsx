@@ -1,71 +1,57 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { Race } from '../../../../../types/Race.tsx'
 import styles from './AddForm.module.css'
 
 export default function AddForm() {
-  const onSubmit = (data) => {
-    console.log(data);
-  };
-
-  const {
-    register,
-    reset,
-    handleSubmit,
-    formState: { errors }
-  } = useForm({
+  const { register, reset, handleSubmit, formState: { errors } } = useForm<Race>({
     mode: 'onChange',
   });
 
+  const onSubmit = (data: Race) => {
+    console.log(data);
+    reset();
+  }
+
   return (
-    <div className={styles.formContainer}>
-      <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-        <h1>Enter data:</h1>
-        
-        <label>
-          Title:
-          <input
-            {...register('title', { 
-              required: "Title is required",
-              minLength: {
-                value: 3,
-                message: "Title must be at least 3 characters long",
-              },
-            })}
-          />
-        </label>
-        {errors.title && <p className={styles.errorMessage}>{errors.title.message}</p>}
-
-        <label>
-          Image:
-          <input
-            {...register('image', {
-              required: "Image is required",
-              pattern: {
-                value: /^[a-zA-Z0-9\s]+$/,
-                message: 'Only letters, numbers, and spaces are allowed',
-              },
-            })}
-          />
-        </label>
-        {errors.image && <p className={styles.errorMessage}>{errors.image.message}</p>}
-
-        <label>
-          Text:
-          <input
-            {...register('text', {
-              required: "Text is required",
-              minLength: {
-                value: 10,
-                message: "Text must be at least 10 characters long",
-              },
-            })}
-          />
-        </label>
-        {errors.text && <p className={styles.errorMessage}>{errors.text.message}</p>}
-
-        <button type="submit">Submit</button>
-        <button type="reset" onClick={reset}>Reset</button>
+    <div className={styles.container}>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <h1>Please enter data</h1>
+        <input
+          placeholder='Id'
+          {...register('id', {
+            required: true,
+            pattern: /^[0-9]*$/
+          })}
+        />
+        <input
+          placeholder='Title'
+          {...register('title', {
+            required: true,
+            minLength: 3,
+            pattern: /^[A-Z][a-zA-Z0-9\s\.,!?'"()\-]*$/
+          })}
+        />
+        <input
+          placeholder='ImageURL'
+          {...register('image', {
+            required: true,
+            pattern: /^(https?:\/\/)?(www\.)?[a-zA-Z0-9-]+(\.[a-zA-Z]{2,})(\/[^\s]*)?$/
+          })}
+        />
+        <textarea
+          placeholder='Main information'
+          {...register('text', {
+            required: true,
+            minLength: 20,
+            pattern: /^[A-Z][a-zA-Z0-9\s\.,!?'"()\-]*$/
+          })}
+        />
+        <div className={styles.buttonContainer}>
+          <button className={styles.submit} type="submit">Відправити</button>
+          <button className={styles.reset} onClick={() => reset()}>Reset</button>
+        </div>
       </form>
-    </div>
-  );
+      </div>
+  )
 }
