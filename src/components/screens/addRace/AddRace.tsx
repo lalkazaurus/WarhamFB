@@ -6,9 +6,9 @@ import AddForm from './elements/AddForm/AddForm.tsx'
 export default function AddRace() {
 	return (
 		<>
-			<Header/>
-			<AddForm/>
-			<Footer/>
+			<Header />
+			<AddForm />
+			<Footer />
 		</>
 	)
 }

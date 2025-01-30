@@ -1,82 +1,91 @@
 .footer {
-  background-color: #000;
-  color: #fff;
-  padding: 20px 0;
-  font-family: 'Poppins', sans-serif;
-  width: 100%;
+	background-color: #000;
+	color: #fff;
+	padding: 20px 0;
+	width: 100%;
+	text-align: center;
 }
 
 .footerContent {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
 }
 
 .footerSection {
-  flex: 1;
-  margin: 10px 20px;
-  min-width: 250px;
+	flex: 1;
+	margin: 10px;
+	min-width: 250px;
+	text-align: left;
 }
 
 .footerTitle {
-  font-size: 20px;
-  margin-bottom: 15px;
-  color: #f5d742;
+	font-size: 20px;
+	margin-bottom: 15px;
+	color: #f5d742;
+	text-align: center;
 }
 
 .footerSection ul {
-  list-style: none;
-  padding: 0;
+	list-style: none;
+	padding: 0;
+	text-align: center;
 }
 
 .footerSection ul li {
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .footerSection ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
+	color: #ffd21c;
+	text-decoration: none;
+	transition: color 0.3s;
 }
 
 .footerSection ul li a:hover {
-  color: #f5d742;
+	color: #ff8e1c;
 }
 
 .footerSection.contact p {
-  margin: 5px 0;
+	margin: 5px 0;
+	text-align: center;
+}
+
+.footerSocials {
+	text-align: center;
+	margin-top: 10px;
 }
 
 .footerSocials a {
-  color: #fff;
-  margin-right: 10px;
-  font-size: 18px;
-  transition: color 0.3s;
+	color: #fff;
+	margin-right: 10px;
+	font-size: 18px;
+	transition: color 0.3s;
 }
 
 .footerSocials a:hover {
-  color: #f5d742;
+	color: #f5d742;
 }
 
 .footerBottom {
-  text-align: center;
-  padding: 10px;
-  background-color: #111;
-  border-top: 1px solid #333;
+	text-align: center;
+	padding: 10px;
+	background-color: #111;
+	border-top: 1px solid #333;
 }
 
 @media (max-width: 768px) {
-  .footerContent {
-    flex-direction: column;
-    align-items: center;
-  }
+	.footerContent {
+		flex-direction: column;
+		align-items: center;
+	}
 
-  .footerSection {
-    margin: 20px 0;
-    text-align: center;
-  }
+	.footerSection {
+		margin: 20px 0;
+		text-align: center;
+	}
 }

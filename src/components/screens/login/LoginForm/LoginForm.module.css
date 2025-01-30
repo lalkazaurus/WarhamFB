@@ -1,0 +1,86 @@
+.container {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+}
+
+h1 {
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 40%;
+	padding: 20px;
+	border-radius: 10px;
+	background-color: white;
+	border: 1px solid black;
+}
+
+.submit,
+.reset {
+	padding: 15px;
+	font-size: 16px;
+	font-weight: 600;
+	transition: 0.3s all ease;
+	cursor: pointer;
+	width: 98%;
+	margin: 5px;
+}
+
+.submit {
+	border: none;
+	background-color: black;
+	color: white;
+}
+
+.reset {
+	border: 1px solid black;
+	background-color: white;
+}
+
+.buttonContainer {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.submit:hover,
+.reset:hover {
+	transform: translate(0, -5px);
+}
+
+.submit:active,
+.reset:active {
+	transform: translate(0, 0);
+}
+
+.error {
+	color: red;
+}
+
+form {
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.submit:active,
+.reset:active {
+	transform: scale(0.98);
+}
+
+.registerLink {
+	color: #959595;
+	text-decoration: dashed;
+	transition: 0.5s ease color;
+}
+
+.registerLink:hover {
+	color: black;
+	text-decoration: dashed;
+}

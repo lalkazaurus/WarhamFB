@@ -5,19 +5,21 @@
 	align-items: center;
 	flex-direction: column;
 	height: 100vh;
-	font-family: "Rubik Vinyl", serif;
+	font-family: 'Rubik Vinyl', serif;
 	background-color: black;
 	border: 1px solid #ffd21c;
 }
 
 .title {
 	color: #ffd21c;
-  font-weight: 700;
-  font-style: normal;
+	font-weight: 700;
+	font-style: normal;
 	font-size: 120px;
 }
 
-.container > h2, p, a {
+.container > h2,
+p,
+.homeLink {
 	color: #ffd21c;
 	text-decoration: none;
 }
@@ -30,12 +32,12 @@
 	font-size: 24px;
 }
 
-.container > a {
+.homeLink {
 	transition: 0.5s all ease;
 	font-size: 30px;
 }
 
-.container > a:hover {
+.homeLink:hover {
 	color: #ff8e1c;
 	transform: translate(0px, -2px);
 }

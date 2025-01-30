@@ -6,7 +6,6 @@ import Header from './elements/Header/Header.tsx'
 import TextBox from './elements/textBox/TextBox.tsx'
 
 export default function Home() {
-
 	return (
 		<div>
 			<Header />

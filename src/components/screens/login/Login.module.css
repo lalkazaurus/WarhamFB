@@ -1,0 +1,99 @@
+.container {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+	background-color: #f4f4f4;
+}
+
+.container > div {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 40%;
+	padding: 25px;
+	border-radius: 12px;
+	background-color: #fff;
+	border: 1px solid black;
+	transition: 0.3s all ease;
+}
+
+.container > div:hover {
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.username {
+	width: 100%;
+	font-size: 22px;
+	font-weight: 600;
+	color: #333;
+	margin-bottom: 15px;
+}
+
+.status {
+	width: 100%;
+	border-top: 1px solid #ddd;
+	padding: 15px 0;
+	font-size: 18px;
+	color: #555;
+	margin-bottom: 20px;
+}
+
+.logout,
+.getUsers {
+	padding: 14px;
+	font-size: 16px;
+	font-weight: 600;
+	transition: 0.3s all ease;
+	cursor: pointer;
+	width: 48%;
+}
+
+.logout {
+	border: none;
+	background-color: black;
+	color: #fff;
+}
+
+.getUsers {
+	border: 1px solid #333;
+	background-color: #fff;
+	color: #333;
+}
+
+.buttonContainer {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.logout:hover,
+.getUsers:hover {
+	transform: translate(0, -5px);
+}
+
+.logout:active,
+.getUsers:active {
+	transform: scale(0.98);
+}
+
+.user {
+	width: 97%;
+	padding: 10px 15px;
+	margin: 5px 0;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	background-color: #fafafa;
+	font-size: 16px;
+	color: #555;
+	transition: 0.3s all ease;
+}
+
+.user:hover {
+	background-color: #f0f0f0;
+	transform: translateY(-3px);
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}

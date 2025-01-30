@@ -1,0 +1,97 @@
+.carrousel {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	max-width: 52%;
+	margin: auto;
+	background: #1f1f1f;
+	border-radius: 20px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.track {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+	width: 100%;
+}
+
+.card {
+	flex: 0 0 100%;
+	text-align: center;
+	position: relative;
+}
+
+.image {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	border-radius: 12px;
+	transition: transform 0.3s ease;
+}
+
+.info {
+	position: absolute;
+	bottom: 15px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: rgba(0, 0, 0, 0.8);
+	padding: 20px;
+	border-radius: 12px;
+	width: 90%;
+	color: #ffffff;
+	backdrop-filter: blur(10px);
+}
+
+.navButton {
+	position: absolute;
+	top: 50%;
+	background: rgba(0, 0, 0, 0.8);
+	border: 2px solid #f9a825;
+	color: #f9a825;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	font-size: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: background 0.3s;
+	z-index: 10;
+}
+
+.navButton:hover {
+	background: #f9a825;
+	color: #000;
+}
+
+.leftButton {
+	left: 10px;
+}
+
+.rightButton {
+	right: 10px;
+}
+
+.indicators {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 10px;
+}
+
+.indicator {
+	width: 12px;
+	height: 12px;
+	background: #bdbdbd;
+	border-radius: 50%;
+	transition: background 0.3s, transform 0.2s;
+	cursor: pointer;
+}
+
+.indicator.active {
+	background: #f9a825;
+	transform: scale(1.2);
+}

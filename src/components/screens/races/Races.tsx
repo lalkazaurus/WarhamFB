@@ -6,13 +6,17 @@ import Header from '../home/elements/Header/Header.tsx'
 import RacesMenu from './RacesMenu/RacesMenu.tsx'
 
 export default function Races() {
-	const { data = [], isLoading, isError } = useQuery({
+	const {
+		data = [],
+		isLoading,
+		isError,
+	} = useQuery({
 		queryKey: ['racesData'],
 		queryFn: async () => {
-			const response = await RaceService.getAllRaces();
-			return response;
+			const response = await RaceService.getAllRaces()
+			return response
 		},
-	});
+	})
 
 	return (
 		<div>

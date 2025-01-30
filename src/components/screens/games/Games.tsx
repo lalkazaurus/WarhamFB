@@ -8,26 +8,30 @@ import Banner from './elements/GameMenu/Banner/Banner.tsx'
 import GameMenu from './elements/GameMenu/GameMenu.tsx'
 
 export default function Games() {
-  const { data = [], isLoading, isError } = useQuery<Game[]>({
-    queryKey: ['gamesData'],
-    queryFn: async () => {
-      const response = await RaceService.getAllGames();
-      return Object.values(response); 
-    },
-  });
+	const {
+		data = [],
+		isLoading,
+		isError,
+	} = useQuery<Game[]>({
+		queryKey: ['gamesData'],
+		queryFn: async () => {
+			const response = await RaceService.getAllGames()
+			return Object.values(response)
+		},
+	})
 
-  return (
-    <div>
-      <Banner />
-      <Header />
-      {isLoading ? (
-        <p>Loading games...</p>
-      ) : isError ? (
-        <p>Error loading games</p>
-      ) : (
-        <GameMenu data={data} />
-      )}
-      <Footer />
-    </div>
-  );
-};
+	return (
+		<div>
+			<Banner />
+			<Header />
+			{isLoading ? (
+				<p>Loading games...</p>
+			) : isError ? (
+				<p>Error loading games</p>
+			) : (
+				<GameMenu data={data} />
+			)}
+			<Footer />
+		</div>
+	)
+}
