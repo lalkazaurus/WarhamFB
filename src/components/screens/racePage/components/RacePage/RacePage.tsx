@@ -16,7 +16,7 @@ export default function RacePage({ race }: RacePageProps) {
 		data: characters,
 		isLoading,
 		error,
-	} = useQuery<Character[]>({
+	} = useQuery<Array<Character>>({
 		queryKey: ['characters', race.title],
 		queryFn: async () => {
 			if (!race || !race.title) {
@@ -33,7 +33,7 @@ export default function RacePage({ race }: RacePageProps) {
 				<Banner race={race} />
 				<h1 className={styles.bigText}>Heroes</h1>
 				<div className={styles.errorBlock}>
-					Error loading characters: {(error as Error).message}
+					Error loading characters: {error.message}
 				</div>
 				<h1 className={styles.bigText}>General</h1>
 				<div className={styles.textBox}>

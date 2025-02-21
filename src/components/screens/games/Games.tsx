@@ -12,7 +12,7 @@ export default function Games() {
 		data = [],
 		isLoading,
 		isError,
-	} = useQuery<Game[]>({
+	} = useQuery<Array<Game>>({
 		queryKey: ['gamesData'],
 		queryFn: async () => {
 			const response = await RaceService.getAllGames()

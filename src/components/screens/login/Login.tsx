@@ -10,7 +10,7 @@ import LoginForm from './LoginForm/LoginForm.tsx'
 
 const Login = observer(() => {
 	const { store } = useContext(Context)
-	const [users, setUsers] = useState<IUser[]>([])
+	const [users, setUsers] = useState<Array<IUser>>([])
 
 	useEffect(() => {
 		if (localStorage.getItem('token')) store.checkAuth()

@@ -7,6 +7,7 @@ import ErrorPage from '../../screens/errorPage/ErrorPage.tsx'
 import Games from '../../screens/games/Games.tsx'
 import Home from '../../screens/home/Home.tsx'
 import Login from '../../screens/login/Login.tsx'
+import PrivacyPolicy from '../../screens/privacyPolicy/PrivacyPolicy.tsx'
 import RacePageWrapper from '../../screens/racePage/RacePageWrapper.tsx'
 import Races from '../../screens/races/Races.tsx'
 import Register from '../../screens/register/Register.tsx'
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
 	{
 		path: '/addCharacter',
 		element: <AddCharacter />,
+	},
+	{
+		path: '/privacy-policy',
+		element: <PrivacyPolicy />,
 	},
 ])
 

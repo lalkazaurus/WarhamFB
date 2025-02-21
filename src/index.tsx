@@ -1,6 +1,7 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import React, { createContext } from 'react'
 import ReactDOM from 'react-dom/client'
+import CookiePopup from './components/ui/CookieConsentPopup/CookieConsentPopup.tsx'
 import Router from './components/ui/Router/Router.tsx'
 import './index.css'
 import AuthStore from './stores/authStore.ts'
@@ -28,6 +29,7 @@ root.render(
 		>
 			<QueryClientProvider client={queryClient}>
 				<Router />
+				<CookiePopup />
 			</QueryClientProvider>
 		</Context.Provider>
 	</React.StrictMode>

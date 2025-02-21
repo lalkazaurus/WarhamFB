@@ -12,7 +12,7 @@ export default function RaceItem({ race }: RaceItemProps) {
 	const { toggleFullscreen } = useFullscreen()
 
 	const handleToggleFullscreen = (e: React.MouseEvent<HTMLDivElement>) => {
-		toggleFullscreen(e.currentTarget as HTMLElement)
+		toggleFullscreen(e.currentTarget)
 	}
 
 	let titleForLink = race.title

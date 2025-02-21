@@ -2,11 +2,35 @@ import axios from 'axios'
 import { Character } from '../types/Character.ts'
 
 export const RaceService = {
+	/**
+	 * @swagger
+	 * /races:
+	 *   get:
+	 *     summary: Get all races
+	 *     description: Returns a list of all races from the database.
+	 *     responses:
+	 *       200:
+	 *         description: Successful request, list of races.
+	 *       400:
+	 *         description: Error fetching data.
+	 */
 	async getAllRaces() {
 		const response = await axios.get('http://localhost:5000/races')
 		return response.data
 	},
 
+	/**
+	 * @swagger
+	 * /games:
+	 *   get:
+	 *     summary: Get all games
+	 *     description: Returns a list of all games from the database.
+	 *     responses:
+	 *       200:
+	 *         description: Successful request, list of games.
+	 *       400:
+	 *         description: Error fetching data.
+	 */
 	async getAllGames() {
 		const response = await axios.get('http://localhost:5000/games')
 		return response.data
