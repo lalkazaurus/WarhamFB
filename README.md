@@ -19,7 +19,7 @@
 
 ```bash
 git clone [<URL репозиторію>](https://github.com/lalkazaurus/WarhamFB.git)
-cd my-app
+git switch master # перехід на гілку з проектом із завданнями ІЗ СТАНДАРТИЗАЦІЇ
 ```
 
 ### Встановлення залежностей
