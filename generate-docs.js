@@ -32,27 +32,42 @@ const getAllFiles = dir => {
 
 const generateDocs = () => {
 	if (!fs.existsSync(componentPath)) {
-		console.log(`Директорія не знайдена: ${componentPath}`)
+		console.log(`❌ Директорія не знайдена: ${componentPath}`)
 		return
 	}
 
 	const components = getAllFiles(componentPath)
 
-	console.log(`Знайдено файлів: ${components.length}`)
-	console.log(`Файли: ${components.join(', ')}`)
+	console.log(`📦 Знайдено файлів: ${components.length}`)
+	console.log(`📁 Файли: \n${components.join('\n')}\n`)
 
 	if (components.length === 0) {
-		console.log('Не знайдено компонентів для генерації документації.')
+		console.log('⚠️ Не знайдено компонентів для генерації документації.')
 		return
 	}
 
-	const docs = components.map(component => {
+	const docs = []
+
+	components.forEach(component => {
 		const componentFile = fs.readFileSync(component, 'utf8')
-		return reactDocgen.parse(componentFile)
+		try {
+			const parsed = reactDocgen.parse(componentFile)
+			docs.push({
+				file: component,
+				component: parsed,
+			})
+		} catch (err) {
+			console.warn(`⚠️ Помилка у файлі ${component}:\n   ${err.message}`)
+		}
 	})
 
+	if (docs.length === 0) {
+		console.log('⚠️ Жодного валідного компонента не знайдено.')
+		return
+	}
+
 	fs.writeFileSync(outputPath, JSON.stringify(docs, null, 2))
-	console.log('Документація успішно згенерована у файл components.json')
+	console.log(`✅ Документація успішно згенерована у файл: ${outputPath}`)
 }
 
 generateDocs()
