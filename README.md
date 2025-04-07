@@ -31,7 +31,7 @@ npm install
 ### Запуск додатку у режимі розробки
 
 ```bash
-npm start
+npm run dev
 ```
 
 ### Збірка для продакшну
@@ -83,10 +83,9 @@ my-app/
 ## Основні команди
 
 ```bash
-npm start     # запуск у режимі розробки
+npm run dev     # запуск у режимі розробки
 npm run build # створення збірки для продакшну
 npm run build:css # запуск Tailwind CSS
-npm test      # запуск тестів
 node --experimental-modules generate-docs.js # генерація документації
 npm run storybook # запуск Storybook
 node swagger.js # запуск Swagger
