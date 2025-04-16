@@ -1,0 +1,21 @@
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     Race:
+ *       type: object
+ *       properties:
+ *         title:
+ *           type: string
+ *           description: Назва раси
+ *         image:
+ *           type: string
+ *           description: URL зображення раси
+ *         text:
+ *           type: string
+ *           description: Опис раси
+ *       required:
+ *         - title
+ *         - image
+ *         - text
+ */
